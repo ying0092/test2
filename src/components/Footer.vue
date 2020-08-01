@@ -49,7 +49,7 @@ export default {
       item: 1,
       items: [
         {
-          title: "關於我們",
+          title: "關於 SURFTREE",
           link: "about"
         },
         {
@@ -89,7 +89,7 @@ export default {
   margin-right: auto;
 }
 #footer a {
-  color: #1a1a1a !important;
+  color: #495057 !important;
 }
 #footer .copyright {
   line-height: 18px;
@@ -102,6 +102,7 @@ export default {
   font-weight: 800;
   padding-left: 44px;
   margin-top: 20px;
+  color: black;
 }
 .footer-logo {
   padding-left: 44px;
@@ -111,8 +112,10 @@ export default {
 }
 
 .footer-menu-inner .menu-item a {
-  font-size: 12px;
-  letter-spacing: 1.2px;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  font-weight: 500;
+  line-height: 40px;
 }
 
 @media screen and (min-width: 768px) {
@@ -162,9 +165,9 @@ export default {
   list-style: none;
 }
 
-.link {
+.footer-contact .link {
   color: white;
-  background: gray;
+  background: black;
   width: 26px;
   height: 26px;
   border-radius: 100%;
@@ -172,7 +175,7 @@ export default {
   display: flex;
   justify-content: center;
 }
-.link svg {
+.footer-contact .link svg {
   color: white;
 }
 #desktop-footer-links {
