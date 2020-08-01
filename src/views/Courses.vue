@@ -265,7 +265,7 @@ export default {
 // }
 
 .courses .content {
-  max-width: 780px;
+  max-width: 760px;
 }
 
 .section-title {

@@ -52,7 +52,7 @@ export default {
 // }
 
 .blog .content {
-  max-width: 780px;
+  max-width: 760px;
 }
 
 .article {

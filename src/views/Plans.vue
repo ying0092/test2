@@ -137,7 +137,7 @@ export default {
         {
           key: "New",
           price: 1500,
-          lessons: "初次體驗",
+          lessons: "單堂試上",
           limit: "新學員，限一次"
         }
       ]
@@ -164,7 +164,7 @@ export default {
 // }
 
 .plans .content {
-  max-width: 780px;
+  max-width: 760px;
 }
 
 .section-title {
