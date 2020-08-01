@@ -17,7 +17,7 @@
       >
         <router-view :style="{ minHeight: windowHeight+'px'}"/>
       </transition>-->
-      <router-view :style="{ minHeight: (windowHeight - 371)+'px'}" />
+      <router-view :style="{ minHeight: (windowHeight)+'px'}" />
     </div>
 
     <router-view name="footer"></router-view>
