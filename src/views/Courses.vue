@@ -249,7 +249,7 @@ export default {
 
 <style lang="scss" scoped>
 .courses {
-  background-image: url("../assets/bg-2_3-100.jpg");
+  // background-image: url("../assets/bg-2_3-100.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;

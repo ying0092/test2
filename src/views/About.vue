@@ -99,7 +99,7 @@ export default {
 
 <style lang="scss" scoped>
 .about {
-  background-image: url("../assets/about-bg.jpg");
+  // background-image: url("../assets/about-bg.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;

@@ -1,11 +1,9 @@
 <template>
   <div id="footer">
-    <div class="row">
-      <div id="footer-menu" class="footer-menu-wrap">
-        <ul
-          id="menu-%e3%80%8a%ef%bc%bf%ef%bc%bf22%e3%80%8b%e7%b7%9a%e4%b8%8a%e8%a8%ad%e8%a8%88%e5%b1%95"
-          class="footer-menu-inner"
-        >
+    <!-- footer menu -->
+    <div>
+      <div class="footer-menu">
+        <ul class="footer-menu-inner">
           <router-link
             class="menu-item"
             tag="li"
@@ -18,9 +16,10 @@
         </ul>
       </div>
     </div>
-    <div class="row">
-      <div class="footer-contact d-flex">
-        <div class="pr-2">Follow us</div>
+    <!-- follow us -->
+    <div>
+      <div class="footer-contact">
+        <div class="text">Follow us</div>
         <div class="link">
           <a href="https://www.instagram.com/surf.tree/" target="_blank">
             <font-awesome-icon :icon="['fab', 'instagram']" />
@@ -28,12 +27,14 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <!-- logo -->
+    <div>
       <div class="footer-logo">
         <img :src="require('../assets/logo.svg')" alt />
       </div>
     </div>
-    <div class="row">
+    <!-- copyright -->
+    <div>
       <div class="copyright">© 2020 SURFTREE. All Rights Reserved.</div>
     </div>
   </div>
@@ -73,98 +74,58 @@ export default {
 <style lang="scss" scoped>
 #footer {
   background-color: rgba(0, 0, 0, 0.075);
-  /* position: relative; */
   padding-bottom: 60px;
 }
-#footer-menu {
-  padding-top: 20px;
-  padding-left: 44px;
-  padding-right: 20px;
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
+
+//menu
+.footer-menu {
+  padding: 20px 44px 0px 44px;
+  justify-content: center;
 }
-#footer .row {
-  width: 360px;
-  margin-left: auto;
-  margin-right: auto;
-}
-#footer a {
+.footer-menu a {
   color: #495057 !important;
 }
-#footer .copyright {
-  line-height: 18px;
-  padding: 0 20px 0 44px;
-  font-size: 10px;
-  letter-spacing: 0.6px;
+.footer-menu-inner {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #e5e5e5;
 }
-
-.footer-contact {
-  font-weight: 800;
-  padding-left: 44px;
-  margin-top: 20px;
-  color: black;
-}
-.footer-logo {
-  padding-left: 44px;
-}
-.footer-logo img {
-  width: 160px;
-}
-
 .footer-menu-inner .menu-item a {
   font-size: 14px;
   letter-spacing: 1.4px;
   font-weight: 500;
-  line-height: 40px;
+  line-height: 48px;
 }
-
 @media screen and (min-width: 768px) {
-  #footer .row {
-    width: 1100px;
-  }
-  #footer-menu {
-    margin: auto;
-    padding-left: 20px;
+  .footer-menu {
+    padding: 20px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
   .footer-menu-inner {
     display: flex;
   }
   .footer-menu-inner .menu-item {
-    margin-right: 36px;
-    line-height: 42px;
+    margin: 0 18px;
+    line-height: 82px;
   }
-  /* .footer-menu-inner .menu-item a {
-    font-family: "Noto Serif", "notoserifcjktc";
-  } */
-  #footer .copyright {
-    margin: auto;
-    line-height: 24px;
-    padding: 0 20px;
-    font-weight: 400;
-    font-size: 12px;
+  .footer-menu-inner .menu-item a {
+    font-weight: 200;
   }
-  .footer-contact {
-    margin: 20px auto 0 auto;
-    padding: 0;
-  }
-  .footer-logo {
-    margin: auto;
-    padding: 0;
-  }
-  /* #footer .logo {
-    padding: 0 22px;
-    position: relative;
-    top: 24px;
-  } */
-}
-#footer ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
 }
 
+// contact
+.footer-contact {
+  display: flex;
+  font-weight: 700;
+  padding: 0 44px;
+  margin-top: 20px;
+  color: black;
+}
+.footer-contact .text {
+  padding-right: 8px;
+}
 .footer-contact .link {
   color: white;
   background: black;
@@ -178,7 +139,39 @@ export default {
 .footer-contact .link svg {
   color: white;
 }
-#desktop-footer-links {
-  display: flex;
+@media screen and (min-width: 768px) {
+  .footer-contact {
+    justify-content: center;
+    padding: 0;
+  }
+}
+
+// logo
+.footer-logo {
+  padding: 0 44px;
+}
+.footer-logo img {
+  width: 160px;
+}
+@media screen and (min-width: 768px) {
+  .footer-logo {
+    text-align: center;
+  }
+}
+
+// copyright
+#footer .copyright {
+  line-height: 18px;
+  padding: 0 44px;
+  font-size: 10px;
+  letter-spacing: 0.6px;
+}
+@media screen and (min-width: 768px) {
+  #footer .copyright {
+    text-align: center;
+    line-height: 24px;
+    font-weight: 400;
+    font-size: 12px;
+  }
 }
 </style>

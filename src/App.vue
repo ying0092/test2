@@ -1,12 +1,5 @@
 <template>
   <div id="app">
-    <!-- <transition
-        enter-active-class="animated fadeInDown delay-2s"
-        leave-active-class="animated fadeOut"
-        mode="out-in"
-      >
-    <router-view name="nav"></router-view>
-    </transition>-->
     <router-view name="nav"></router-view>
 
     <div class="content">
@@ -21,22 +14,12 @@
     </div>
 
     <router-view name="footer"></router-view>
-    <!-- <Footer /> -->
   </div>
 </template>
 
 <script>
-// import Nav from "@/components/Nav.vue";
-//import Sidebar from "@/components/Sidebar.vue";
-// import Footer from "@/components/Footer.vue";
-
 export default {
   name: "Home",
-  components: {
-    // Nav,
-    //Sidebar,
-    // Footer
-  },
   data() {
     return {
       windowHeight: window.innerHeight
@@ -64,15 +47,6 @@ a:hover {
 }
 
 #app {
-  /* font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50; */
-
-  /* background-color: #f2f2f2; */
-  /* font-family: serif; */
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #495057;

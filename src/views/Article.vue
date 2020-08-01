@@ -1,7 +1,7 @@
 <template>
   <div class="article d-flex justify-content-center pb-5">
       <Nav />
-      <div class="p-5 content">
+      <div class="p-3 content">
         <h1 id="pu-eps-">PU 或 EPS 板哪個好？</h1>
         <hr />
         <h3 id="-surfboard-blanks-">關於 Surfboard Blanks 的小歷史</h3>
