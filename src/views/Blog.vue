@@ -4,44 +4,17 @@
     <div class="p-3 content">
       <!-- new -->
       <div>
-        <!-- <div class="py-3">
-          <span class="tag">LATEST</span>
-        </div>-->
-        <router-link to="article">
-          <div class="article p-3">
-            <p class="date text-muted">2020 Jun 30</p>
+        <div class="article p-3">
+          <p class="date text-muted">2020 Jun 30</p>
+          <router-link to="article">
             <div class="my-3">
               <img :src="require('../assets/a1.jpg')" alt />
             </div>
+          </router-link>
+          <router-link to="article" class="article-title">
             <h5>PU 或 EPS 板哪個好？</h5>
-            <p>關於 Surfboard Blanks 的小歷史...</p>
-          </div>
-        </router-link>
-        <div class="article p-3">
-          <p class="date text-muted">2020 Jun 30</p>
-          <div class="my-3">
-            <img :src="require('../assets/a1.jpg')" alt />
-          </div>
-          <h5>PU 或 EPS 板哪個好？</h5>
+          </router-link>
           <p>關於 Surfboard Blanks 的小歷史...</p>
-        </div>
-      </div>
-      <!-- list -->
-      <div class="pt-3">
-        <!-- <div class="pt-3">
-          <span class="tag">LIST</span>
-        </div>-->
-        <div class="row">
-          <div v-for="i in 5" :key="i" class="col-sm-6">
-            <div class="article p-3 my-3">
-              <p class="date text-muted">2020 Jun 30</p>
-              <div class="my-3">
-                <img :src="require('../assets/a1.jpg')" alt />
-              </div>
-              <h5>PU 或 EPS 板哪個好？</h5>
-              <p>關於 Surfboard Blanks 的小歷史...</p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -61,7 +34,7 @@ export default {
 
 <style lang="scss" scoped>
 .blog {
-  background-image: url("../assets/blog-bg.jpg");
+  // background-image: url("../assets/blog-bg.jpg");
   background-color: #f8f9fa94;
   background-position: center;
   background-size: cover;
@@ -103,5 +76,9 @@ export default {
   border: 1px solid;
   padding: 0.2rem 1rem;
   border-radius: 15px;
+}
+
+.article-title {
+  color: black;
 }
 </style>

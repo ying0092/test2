@@ -23,7 +23,8 @@ Vue.use(VueRouter)
     // component: About
     components: {
       default: About,
-      nav: Nav
+      nav: Nav,
+      footer: Footer
     }
   },
   {
@@ -32,7 +33,8 @@ Vue.use(VueRouter)
     // component: Courses,
     components: {
       default: Courses,
-      nav: Nav
+      nav: Nav,
+      footer: Footer
     }
   },
   {
@@ -72,7 +74,10 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
+  scrollBehavior () {
+    return { x: 0, y: 0 }
+  }
 })
 
 export default router

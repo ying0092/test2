@@ -6,8 +6,7 @@
         <hr />
         <h3 id="-surfboard-blanks-">關於 Surfboard Blanks 的小歷史</h3>
         <p>
-          在50年代後期，Hobie Alter 開始嘗試使用不同的 $PU^
-          <em>$ 配方，以製作比 Balsa 木材更容易成型和生產的 $Blank^</em>$。這成為衝浪板製造的一個轉捩點，因為發泡材質更容易成型也能更穩定的加工，板子的重量下降，性能也達到頂峰。
+          在50年代後期，Hobie Alter 開始嘗試使用不同的 PU 配方，以製作比 Balsa 木材更容易成型和生產的 Blank。這成為衝浪板製造的一個轉捩點，因為發泡材質更容易成型也能更穩定的加工，板子的重量下降，性能也達到頂峰。
         </p>
         <blockquote>
           <ul>
@@ -162,7 +161,7 @@ export default {
 // }
 
 .article {
-  background-image: url("../assets/about-bg.jpg");
+  // background-image: url("../assets/about-bg.jpg");
   background-color: #f8f9fa94;
   background-position: center;
   background-size: cover;
@@ -180,15 +179,7 @@ export default {
 // }
 
 .article .content {
-  max-width: 720px;
-  background-color: #ffffff96;
-}
-
-.article {
-  background-image: url("../assets/blog-bg.jpg");
-  border-radius: 5px;
-  background-color: #f8f9fade;
-  box-shadow: 0 1px 4px rgba(230, 230, 230, 1);
+  max-width: 780px;
 }
 
 .article img {

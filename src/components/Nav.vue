@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <!-- head bar -->
+    <!-- pc menu -->
     <nav class="my-navbar sticky-top">
       <ul class="justify-content-center">
         <router-link
@@ -9,8 +9,7 @@
           :key="item.title"
           :to="{ path: item.link, hash: item.fragment }"
         >
-          <a>\\ {{ item.title }}</a>
-          <!-- <img class="nav-bottom-line" :src="require('../assets/nav-bottom-line.svg')" alt /> -->
+          <a>| {{ item.title }}</a>
         </router-link>
       </ul>
     </nav>
@@ -79,29 +78,41 @@ export default {
 }
 
 nav ul {
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
+  // display: -moz-flex;
+  // display: -webkit-flex;
+  // display: -ms-flex;
+  // display: flex;
   margin-bottom: 0;
   list-style: none;
   padding-left: 0;
+  // flex-direction: column;
 }
 
 nav ul li {
   padding: 1rem 0.5rem;
 }
 
+.router-link-exact-active a {
+  font-weight: 900;
+  color: #495057;
+}
+
 nav ul li a {
   font-family: serif;
-  color: #495057;
-  writing-mode: vertical-lr;
+  color: #49505794;
+  // writing-mode: vertical-lr;
   // font-weight: bolder;
   font-size: 1.2rem;
+  letter-spacing: 3px;
 }
 
 .nav-bottom-line {
   position: relative;
   top: -10px;
+}
+@media screen and (max-width: 1100px) {
+  .my-navbar {
+    display: none;
+  }
 }
 </style>
