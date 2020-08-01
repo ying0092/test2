@@ -70,7 +70,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 #footer {
   background-color: rgba(0, 0, 0, 0.075);
   /* position: relative; */
@@ -156,7 +156,7 @@ export default {
     top: 24px;
   } */
 }
-ul {
+#footer ul {
   padding: 0;
   margin: 0;
   list-style: none;

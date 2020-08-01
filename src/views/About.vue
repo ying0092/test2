@@ -115,7 +115,7 @@ export default {
 // }
 
 .about .content {
-  max-width: 680px;
+  max-width: 780px;
 }
 
 .title-1 {

@@ -77,7 +77,7 @@ export default {
   padding-left: 2rem;
 }
 
-nav ul {
+#nav ul {
   // display: -moz-flex;
   // display: -webkit-flex;
   // display: -ms-flex;
@@ -88,16 +88,16 @@ nav ul {
   // flex-direction: column;
 }
 
-nav ul li {
+#nav ul li {
   padding: 1rem 0.5rem;
 }
 
-.router-link-exact-active a {
+#nav .router-link-exact-active a {
   font-weight: 900;
   color: #495057;
 }
 
-nav ul li a {
+#nav ul li a {
   font-family: serif;
   color: #49505794;
   // writing-mode: vertical-lr;
