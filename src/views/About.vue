@@ -164,10 +164,10 @@ p.title-2 {
   margin: 0 15px;
 }
 
-.team {
-  border-radius: 15px;
-  background-color: rgba(245, 249, 253, 0.61);
-}
+// .team {
+//   border-radius: 15px;
+//   background-color: rgba(245, 249, 253, 0.61);
+// }
 
 .team-img {
   width: 100%;

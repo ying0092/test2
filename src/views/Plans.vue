@@ -8,7 +8,7 @@
           <span class="section-title-main">課程方案</span>
           <b></b>
         </h4>
-        <div class="p-3">
+        <div>
           <div>
             <p>
               為提升學習品質＆保持進步，

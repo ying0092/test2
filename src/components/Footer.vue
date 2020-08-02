@@ -121,14 +121,14 @@ export default {
   font-weight: 700;
   padding: 0 44px;
   margin-top: 20px;
-  color: black;
+  color: #343a40;
 }
 .footer-contact .text {
   padding-right: 8px;
 }
 .footer-contact .link {
   color: white;
-  background: black;
+  background: #343a40;
   width: 26px;
   height: 26px;
   border-radius: 100%;
