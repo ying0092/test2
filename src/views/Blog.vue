@@ -1,11 +1,9 @@
 <template>
   <div class="blog">
-    <router-view name="nav"></router-view>
     <div class="p-3 content">
       <router-view />
       <router-link to="/blog" tag="a" class="back">&laquo; Back</router-link>
     </div>
-    <router-view name="footer"></router-view>
   </div>
 </template>
 <style lang="scss" scoped>

@@ -19,14 +19,19 @@ const blogRoutes = Object.keys(BlogEntries).map(section => {
     // component: () => import(`../markdowns/${section}/${child.id}.md`)
     components: {
       default: () => import(`../markdowns/${section}/${child.id}.md`),
-      nav: Nav,
-      footer: Footer
+      //nav: Nav,
+      //footer: Footer
     }
   }))
   return {
     path: `/${section}`,
     name: section,
-    component: () => import('../views/Blog.vue'),
+    //component: () => import('../views/Blog.vue'),
+    components: {
+      default: () => import('../views/Blog.vue'),
+      nav: Nav,
+      footer: Footer
+    },
     children
   }
 })
