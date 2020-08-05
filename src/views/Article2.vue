@@ -1,6 +1,8 @@
 <template>
   <div class="article">
-    <foo class="content"/>
+    <div class="content">
+    <foo/>
+    </div>
   </div>
 </template>
 

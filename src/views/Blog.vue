@@ -1,84 +1,49 @@
 <template>
-  <div class="blog d-flex justify-content-center pb-5">
-    <Nav />
-    <div class="p-3 content">
-      <!-- new -->
-      <div>
-        <div class="article p-3">
-          <p class="date text-muted">2020 Jun 30</p>
-          <router-link to="article">
-            <div class="my-3">
-              <img :src="require('../assets/a1.jpg')" alt />
-            </div>
-          </router-link>
-          <router-link to="article" class="article-title">
-            <h5>PU 或 EPS 板哪個好？</h5>
-          </router-link>
-          <p>關於 Surfboard Blanks 的小歷史...</p>
-        </div>
-      </div>
-    </div>
+  <div class="blog">
+    <router-view />
+    <router-link to="/blog" tag="a" class="back">&laquo; Back</router-link>
   </div>
 </template>
-
-<script>
-//import Nav from "@/components/Nav.vue";
-
-export default {
-  name: "About",
-  components: {
-    //Nav,
-  }
-};
-</script>
-
 <style lang="scss" scoped>
 .blog {
-  // background-image: url("../assets/blog-bg.jpg");
-  background-color: #f8f9fa94;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  overflow-y: scroll;
-  padding-top: 30px;
-  // margin-top: -105px;
-  // padding-top: 105px;
-}
-// @media screen and (max-width: 480px) {
-//   .blog {
-//     margin-top: unset;
-//     z-index: 1;
-//   }
-// }
+  max-width: 50vw;
+  margin: 10rem auto;
 
-.blog .content {
-  max-width: 760px;
-}
-
-.article {
-  border-radius: 5px;
-  background-color: #f8f9fade;
-  box-shadow: 0 1px 4px rgba(230, 230, 230, 1);
-}
-
-.article img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  // overflow:hidden;
-}
-
-.date {
-  font-family: serif;
-}
-
-.tag {
-  border: 1px solid;
-  padding: 0.2rem 1rem;
-  border-radius: 15px;
-}
-
-.article-title {
-  color: black;
+  .back {
+    background-color: #42b883;
+    color: white;
+    margin-top: 5rem;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1px solid currentColor;
+    border-radius: .5rem;
+    display: inline-block;
+    transition: all .3s ease;
+    &:hover {
+      background-color: transparent;
+      color: #42b883;
+    }
+  }
+  /deep/ {
+    h1 {
+      font-size: 3rem;
+      margin-bottom: .2rem;
+      color: #42b883;
+    }
+    h4 {
+      margin-bottom: 3rem;
+      color: #35495e;
+    }
+    pre {
+      overflow-x: auto;
+      background-color: #35495e;
+      color: white;
+      border-radius: .3rem;
+      padding: 1rem;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
 }
 </style>

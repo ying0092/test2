@@ -6,7 +6,7 @@ import Courses from '../views/Courses.vue'
 import Plans from '../views/Plans.vue'
 import Nav from '../components/Nav.vue'
 import Footer from '../components/Footer.vue'
-import Blog from '../views/Blog.vue'
+import Blogs from '../views/Blogs.vue'
 import Article from '../views/Article.vue'
 
 Vue.use(VueRouter)
@@ -16,15 +16,17 @@ const blogRoutes = Object.keys(BlogEntries).map(section => {
   const children = BlogEntries[section].map(child => ({
     path: child.id,
     name: child.id,
-    component: () => import(`../articles/${section}/${child.id}.md`)
+    component: () => import(`../markdowns/${section}/${child.id}.md`)
   }))
   return {
     path: `/${section}`,
     name: section,
-    component: () => import('../views/Article2.vue'),
+    component: () => import('../views/Blog.vue'),
     children
   }
 })
+
+console.log(blogRoutes)
 
 const routes = [
   {
@@ -70,7 +72,7 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     // component: () => import(/* webpackChunkName: "about" */ '../views/Blog.vue')
     components: {
-      default: Blog,
+      default: Blogs,
       nav: Nav,
       footer: Footer
     }
@@ -84,7 +86,7 @@ const routes = [
       footer: Footer
     }
   },
-  ...blogRoutes
+  ...blogRoutes,
 ]
 
 const router = new VueRouter({
