@@ -11,7 +11,22 @@ import Article from '../views/Article.vue'
 
 Vue.use(VueRouter)
 
-  const routes = [
+import BlogEntries from '../statics/data/blogs.json';
+const blogRoutes = Object.keys(BlogEntries).map(section => {
+  const children = BlogEntries[section].map(child => ({
+    path: child.id,
+    name: child.id,
+    component: () => import(`../articles/${section}/${child.id}.md`)
+  }))
+  return {
+    path: `/${section}`,
+    name: section,
+    component: () => import('../views/Article2.vue'),
+    children
+  }
+})
+
+const routes = [
   {
     path: '/',
     name: 'Home',
@@ -68,14 +83,15 @@ Vue.use(VueRouter)
       nav: Nav,
       footer: Footer
     }
-  }
+  },
+  ...blogRoutes
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes,
-  scrollBehavior () {
+  scrollBehavior() {
     return { x: 0, y: 0 }
   }
 })
