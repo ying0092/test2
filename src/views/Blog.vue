@@ -1,12 +1,16 @@
 <template>
   <div class="blog">
-    <router-view />
-    <router-link to="/blog" tag="a" class="back">&laquo; Back</router-link>
+    <router-view name="nav"></router-view>
+    <div class="p-3 content">
+      <router-view />
+      <router-link to="/blog" tag="a" class="back">&laquo; Back</router-link>
+    </div>
+    <router-view name="footer"></router-view>
   </div>
 </template>
 <style lang="scss" scoped>
-.blog {
-  max-width: 50vw;
+.blog .content {
+  max-width: 760px;
   margin: 10rem auto;
 
   .back {
@@ -16,9 +20,9 @@
     text-decoration: none;
     padding: 10px 15px;
     border: 1px solid currentColor;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     display: inline-block;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     &:hover {
       background-color: transparent;
       color: #42b883;
@@ -27,7 +31,7 @@
   /deep/ {
     h1 {
       font-size: 3rem;
-      margin-bottom: .2rem;
+      margin-bottom: 0.2rem;
       color: #42b883;
     }
     h4 {
@@ -38,7 +42,7 @@
       overflow-x: auto;
       background-color: #35495e;
       color: white;
-      border-radius: .3rem;
+      border-radius: 0.3rem;
       padding: 1rem;
     }
     img {
